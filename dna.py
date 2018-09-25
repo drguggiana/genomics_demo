@@ -26,5 +26,6 @@ class DNA:
     def complimentary_sequence(self):
         return DNA(''.join(complimentary_nucleotides[nt.upper()] for nt in self.sequence))
 
-    # def transcribe(self):
-    #     return RNA(''.join(complimentary_ribonucleotides[nt.upper()] for nt in self.sequence))
+    def transcribe(self):
+        from rna import RNA
+        return RNA(''.join(complimentary_ribonucleotides[nt.upper()] for nt in self.sequence))
