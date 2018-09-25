@@ -1,7 +1,6 @@
 complimentary_nucleotides = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
 complimentary_ribonucleotides = {'A': 'U', 'T': 'A', 'C': 'G', 'G': 'C'}
 
-# from rna import RNA
 
 class DNA:
     def __init__(self, sequence: str):
@@ -27,5 +26,5 @@ class DNA:
         return DNA(''.join(complimentary_nucleotides[nt.upper()] for nt in self.sequence))
 
     def transcribe(self):
-        from rna import RNA
+        from genomics_demo.rna import RNA
         return RNA(''.join(complimentary_ribonucleotides[nt.upper()] for nt in self.sequence))

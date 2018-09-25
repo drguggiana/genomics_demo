@@ -1,5 +1,5 @@
-from rna import RNA
-from dna import DNA
+from genomics_demo.rna import RNA
+from genomics_demo.dna import DNA
 import pytest
 
 def test_bad_sequence_raises_error():
@@ -15,6 +15,7 @@ def test_complimentary_sequence_works():
 def test_is_dna():
     with pytest.raises(ValueError):
         RNA('ATG')
+
 
 def test_does_it_transcribe():
     assert RNA('AUGC').retrotranscribe() == DNA('TACG')
