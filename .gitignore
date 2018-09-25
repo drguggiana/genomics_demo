@@ -1,5 +1,7 @@
 build
 dist
 .pytest_cache
-*.egg_info
+*.egg-info
 venv
+.idea
+__pycache__
